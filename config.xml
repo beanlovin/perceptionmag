@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<widget xmlns = "http://www.w3.org/ns/widgets"
+		xmlns:gap = "http://phonegap.com/ns/1.0"
+		xmlns:android = "http://schemas.android.com/apk/res/android"
+		id        = "uk.co.litesoft.perceptionmagazine"
+		versionCode="101"
+		version   = "1.0.0">
+		<name>Perception Magazine</name>
+		<description>Perception Magazine</description>
+		<author href="https://www.litesoft.co.uk" email="beanlovin@gmail.com">Litesoft</author>
+        
+  <config-file platform="ios" parent="NSCameraUsageDescription">
+    <string>Perception would like to access the camera for QR codes.</string>
+  </config-file>
+
+        <gap:plugin name="cordova-plugin-ios-camera-permissions" source="npm" />
+        <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+        <gap:plugin name="cordova-plugin-statusbar" source="npm" />
+        <gap:plugin name="phonegap-plugin-barcodescanner" source="npm" />
+        <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
+
+        <gap:config-file platform="ios" parent="ITSAppUsesNonExemptEncryption" mode="add">
+<false/>
+</gap:config-file>
+        
+        
+		<feature name="http://api.phonegap.com/1.0/network"/>
+		<feature name="http://api.phonegap.com/1.0/notification"/>
+        <feature name="http://api.phonegap.com/1.0/camera"/>
+          
+        <feature name="InAppBrowser">
+            <param name="ios-package" value="CDVInAppBrowser" onload="true" />
+        </feature>
+        
+        <feature name="StatusBar">
+            <param name="ios-package" value="CDVStatusBar" onload="true" />
+        </feature>
+        
+<preference name="orientation" value="portrait" />
+<preference name="fullscreen" value="false" />
+<preference name="target-device" value="handset" />
+<preference name="webviewbounce" value="true" />
+<preference name="prerendered-icon" value="true" />
+<preference name="stay-in-webview" value="true" />
+<preference name="detect-data-types" value="true" />
+<preference name="exit-on-suspend" value="false" />
+<preference name="show-splash-screen-spinner" value="true" />
+<preference name="auto-hide-splash-screen" value="true" />
+<preference name="FadeSplashScreen " value="true" />
+<preference name="EnableViewportScale" value="false" />
+<preference name="MediaPlaybackRequiresUserAction" value="false" />
+<preference name="AllowInlineMediaPlayback" value="true" />
+<preference name="TopActivityIndicator" value="white" />
+<preference name="SuppressesIncrementalRendering" value="false" />
+<preference name="windows-identity-name" value="" />
+<preference name="android-minSdkVersion" value="14" />
+<preference name="android-targetSdkVersion" value="14" />
+<preference name="android-installLocation" value="auto" />
+<preference name="StatusBarOverlaysWebView" value="false"/>
+<preference name="StatusBarBackgroundColor" value="#FFFFFF"/>
+<preference name="StatusBarStyle" value="blacktranslucent" />
+                
+		<platform name="ios">
+		<icon src="icon60.png" width="60" height="60" />
+		<icon src="icon120.png" width="120" height="120" />
+		<icon src="icon180.png" width="180" height="180" />
+		<icon src="icon76.png" width="76" height="76" />
+		<icon src="icon152.png" width="152" height="152" />
+		<icon src="icon29.png" width="29" height="29" />
+		<icon src="icon58.png" width="58" height="58" />
+		<icon src="icon87.png" width="87" height="87" />
+		<icon src="icon40.png" width="40" height="40" />
+		<icon src="icon80.png" width="80" height="80" />
+        <icon src="icon144.png" width="144" height="144" />
+        <icon src="icon57.png" width="57" height="57" />
+		<splash src="splash1242.png" width="1242" height="2208" /> 
+		<splash src="splash750.png" width="750" height="1334" /> 
+		<splash src="splash640.png" width="640" height="1136" /> 
+		<splash src="splash640retina.png" width="640" height="960" /> 
+		</platform>
+		<platform name="android">
+ 		<icon src="icon60.png" width="60" height="60" />
+		<icon src="icon120.png" width="120" height="120" />
+		<icon src="icon180.png" width="180" height="180" />
+		<icon src="icon76.png" width="76" height="76" />
+		<icon src="icon152.png" width="152" height="152" />
+		<icon src="icon29.png" width="29" height="29" />
+		<icon src="icon58.png" width="58" height="58" />
+		<icon src="icon87.png" width="87" height="87" />
+		<icon src="icon40.png" width="40" height="40" />
+		<icon src="icon80.png" width="80" height="80" />
+        <icon src="icon144.png" width="144" height="144" />
+        <icon src="icon57.png" width="57" height="57" />
+		<splash src="splash1242.png" width="1242" height="2208" /> 
+		<splash src="splash750.png" width="750" height="1334" /> 
+		<splash src="splash640.png" width="640" height="1136" /> 
+		<splash src="splash640retina.png" width="640" height="960" /> 
+        <icon src="icon.png" />
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.CAMERA" />
+		</platform>
+<access origin="http://perceptionmagazine.co.uk" subdomains="true" />
+<access origin="http://litesoft.co.uk" subdomains="true" />
+<access origin="*" />
+<access origin=".*" />
+            <allow-navigation href="*" />
+    <allow-intent href="*" />
+        <allow-navigation href="http://*/*" />
+<allow-intent href="https://*/*" />
+</widget>

@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-opaque">
+<title>Perception</title>
+
+<link rel="stylesheet" href="css/framework7.ios.min.css">
+<link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+   
+
+</head>
+<body>
+    
+<div class="statusbar-overlay"></div>
+ 
+<div class="panel-overlay"></div>
+ 
+<div class="panel panel-left panel-reveal" style="background:#195176;">
+<div class="content-block" align="center">
+    <span id="signed_in_avatar">null</span>
+    <h2 style="color:white; text-align:center;"><span id="signed_in_fullname">null</span></h2>
+    
+        <p class="buttons-row"><a href="#" class="button button-fill color-red open-login-screen">Logout</a>      
+</p>
+</div>
+    
+    <div class="list-block">
+<div class="list-group" style="color:white;">
+
+        <a href="#view-1" class="tab-link item-content list-panel-all close-panel item-link">
+<div class="item-media"><i class="ion-ios-contact-outline"></i></div>
+<div class="item-inner">
+<div class="item-title">Me</div>
+</div>
+    </a>
+    
+    <a href="#view-2" class="tab-link item-content list-panel-all close-panel item-link">
+<div class="item-media"><i class="ion-ios-calendar-outline"></i></div>
+<div class="item-inner">
+<div class="item-title">Timetable</div>
+</div>
+    </a>
+    
+        <a href="#view-1213" class="tab-link item-content list-panel-all close-panel item-link">
+<div class="item-media"><i class="ion-ios-paper-outline"></i></div>
+<div class="item-inner">
+<div class="item-title">Homework</div>
+</div>
+    </a>
+    
+        <a href="#view-3" class="tab-link item-content list-panel-all close-panel item-link">
+<div class="item-media"><i class="ion-ios-information-outline"></i></div>
+<div class="item-inner">
+<div class="item-title">Detentions</div>
+</div>
+    </a>
+    
+            
+        <a href="#view-6" class="tab-link item-content list-panel-all close-panel item-link">
+<div class="item-media"><i class="ion-ios-star-outline"></i></div>
+<div class="item-inner">
+<div class="item-title">Cyfle Coins</div>
+</div>
+    </a>
+    
+            <a href="#view-17" class="tab-link item-content list-panel-all close-panel item-link">
+<div class="item-media"><i class="ion-ios-chatboxes-outline"></i></div>
+<div class="item-inner">
+<div class="item-title">Pupil Voice</div>
+</div>
+    </a>
+    
+    <a href="javascript:scan();" class="tab-link item-content list-panel-all close-panel item-link">
+<div class="item-media"><i class="ion-ios-barcode-outline"></i></div>
+<div class="item-inner">
+<div class="item-title">QR Scan</div>
+</div>
+    </a>
+    
+    <a href="#view-4" class="tab-link item-content list-panel-all close-panel item-link">
+<div class="item-media"><i class="ion-ios-more"></i></div>
+<div class="item-inner">
+<div class="item-title">More/About</div>
+</div>
+    </a>
+
+</div>
+</div>
+    
+</div>
+     
+<div class="views tabs navbar-through">
+    
+<div id="view-1" class="view view-main tab active">
+     
+        <div class="navbar" style="    border-bottom: none;
+    background: #2574A9;
+    color: #fff;">
+<div class="navbar-inner">
+        <div class="left">
+    <a href="#"  style="color:white;font-size: 26px;" class="open-panel"><i class="icon ion-navicon"></i></a>
+    </div>
+<div class="center sliding">MyCyfle</div>
+    <div class="right">
+    <a href="javascript:refresh();" class="" style="color:white;font-size: 26px;"><i class="icon ion-ios-refresh-empty"></i></a>
+    </div>
+</div>
+    </div>
+    
+<div class="pages navbar-through">
+ 
+<div data-page="index-1" class="page">
+ 
+<div class="page-content">
+    
+<div class="content-block">
+    <h1 style="font-size: 50px;
+    margin-bottom: 0px; color:#2574A9;">Me</h1>
+<p>Welcome back to MyCyfle. You can use MyCyfle to view your timetable for the day, your detentions, your homework and much more.</p>
+        
+</div>
+
+    
+</div>
+</div>
+</div>
+    
+    
+</div>
+ 
+<div id="view-2" class="view tab">
+     
+            <div class="navbar" style="    border-bottom: none;
+    background: #2574A9;
+    color: #fff;">
+<div class="navbar-inner">
+        <div class="left">
+    <a href="#"  style="color:white;font-size: 26px;" class="open-panel"><i class="icon ion-navicon"></i></a>
+    </div>
+<div class="center sliding">MyCyfle</div>
+    <div class="right">
+    <a href="javascript:refresh();" class="" style="color:white;font-size: 26px;"><i class="icon ion-ios-refresh-empty"></i></a>
+    </div>
+</div>
+    </div>
+    
+<div class="pages navbar-through">
+<div data-page="index-2" class="page">
+<div class="page-content">
+<div class="content-block">
+<p>Here you can view your timetable for the current day. You can use this list to schedule your day.</p>
+    <p><a href="#view-18" class="tab-link button">View full timetable</a></p>
+</div>
+
+    <div id="timetable-ajax">
+    
+    
+    
+    </div>
+    
+</div>
+</div>
+</div>
+</div>
+ 
+<div id="view-4" class="view tab">
+<div class="pages navbar-fixed">
+<div data-page="index-4" class="page">
+
+            <div class="navbar" style="    border-bottom: none;
+    background: #2574A9;
+    color: #fff;">
+<div class="navbar-inner">
+        <div class="left">
+    <a href="#"  style="color:white;font-size: 26px;" class="open-panel"><i class="icon ion-navicon"></i></a>
+    </div>
+<div class="center sliding">MyCyfle</div>
+    <div class="right">
+    <a href="javascript:refresh();" class="" style="color:white;font-size: 26px;"><i class="icon ion-ios-refresh-empty"></i></a>
+    </div>
+</div>
+    </div>
+    
+<div class="page-content">
+    
+        <div class="list-block">
+<ul>
+    
+        <li><a href="#view-8" class="tab-link item-link">
+<div class="item-content">
+<div class="item-inner">
+<div class="item-title">School Term and Holiday Dates</div>
+</div>
+</div></a></li>
+    
+            <li><a href="#view-9" class="tab-link item-link">
+<div class="item-content">
+<div class="item-inner">
+<div class="item-title">Attendance</div>
+</div>
+</div></a></li>
+    
+    <li><a href="#view-11" class="tab-link item-link">
+<div class="item-content">
+<div class="item-inner">
+<div class="item-title">My Logins</div>
+</div>
+</div></a></li>
+    
+        <li><a href="javascript:window.open('https://www.facebook.com/thecyfle#', '_system', '');" class="tab-link item-link">
+<div class="item-content">
+<div class="item-inner">
+<div class="item-title">TheCyfle on Facebook</div>
+</div>
+</div></a></li>
+
+    
+    
+</ul>
+</div>
+
+<div class="content-block-title">About</div>
+<div class="content-block">
+<p>This application is designed, created and managed by the IT Department. Please report bugs and other features to cwmwl@newtown-hs.powys.sch.uk</p>
+    <p>All data used is not stored on your device but on our secure servers and this application complies with the Data Protection Act 1998.</p>
+        <p>The Student Assembly were instrumental in securing this app for all students.</p>
+    
+    <div class="list-block-label" style="color:#ddd;">
+                      <p><img src="img/small_logo_sa.png"></p>
+</div>
+    <p>v2.0.8 - 21/02/17</p>
+        <p><span id="device_os">null</span></p>
+      <p><span id="device_type">null</span></p>
+    
+    
+</div>
+    
+
+    
+</div>
+</div>
+</div>
+</div>
+
+
+     
+</div>
+    
+    <!-- Should be a direct child of BODY -->
+  <div class="login-screen modal-in">
+      <!-- Default view-page layout -->
+      <div class="view">
+        <div class="page">
+          <!-- page-content has additional login-screen content -->
+          <div class="page-content login-screen-content" style="
+    background: none;
+    background: white;
+    -webkit-background-size: cover;
+    background-size: cover;  background-image: url('img/blurfront4.jpg'); background-position: top center;"><br>
+            <div class="login-screen-title" style="color:#FF3366;">
+<br>Perception</div>
+              
+              <style type="text/css">
+              
+                  .element-hidden {
+                      display:none;
+                  }
+                  
+              </style>
+              
+                                
+                  <div class="list-block-label" style="color:#aaa; margin-left: 15px;
+    margin-right: 15px;">
+<p>blank text</p>
+</div>
+                          
+            <!-- Login form -->
+            <form id="login-form" class="ajax-submit store-data" action="x" method="GET">
+              <div class="list-block inset" style="margin-left: 15px;
+    margin-right: 15px; background-color:white;">
+                  
+                <ul id="signin_form_api">
+                  <li class="item-content">
+                      <div class="item-media"><i class="icon ion-ios-person-outline"></i></div>
+                    <div class="item-inner">
+                      <div class="item-input">
+                        <input type="text" name="username" style="color:black;">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content">
+                      <div class="item-media"><i class="icon ion-ios-locked-outline"></i></div>
+                    <div class="item-inner">
+                      <div class="item-input">
+                        <input type="password" name="password" style="color:black;">
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                  <div id="signin_form_spinner" class="element-hidden" align="center"><span style="width:42px; height:42px" class="preloader"></span></div>
+              </div>
+              <div class="list-block inset" style="margin-left: 15px;
+    margin-right: 15px;">
+                <ul align="center">
+                  <li>
+                      <input type="hidden" name="mc_version" value="2.0.8">
+                    <input type="submit" class="button button-big button-fill" id="signin_button" value="Sign in" style="background-color:#FF3366;">
+                  </li>
+                </ul>
+                  
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+  </div>
+ 
+<script type="text/javascript" src="js/framework7.min.js"></script>
+<script type="text/javascript" src="js/my-app.js"></script>
+<script src="phonegap.js"></script>
+<script src="barcodescanner.js"></script>
+</body>
+</html>
