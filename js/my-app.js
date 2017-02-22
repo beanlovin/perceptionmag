@@ -29,17 +29,15 @@ $$('form.ajax-submit').on('submitted', function (e) {
       
       refresh_data(global_api_user);
       
-      $$.get("https://portal.newtown-hs.powys.sch.uk/services/cwmwl/api/app_get_userinfo.php?auth=4f2a3314e46e090675d3d53e1c1d1238&user=" + global_api_user, function( data ) {
+      $$.get("x" + global_api_user, function( data ) {
           full_name = data;
           $$('span[id=signed_in_fullname]').html(data);
       });
             
       $$('span[id=signed_in_user]').html(data);
       
-      $$('span[id=signed_in_avatar]').html("<img src=\"https://portal.newtown-hs.powys.sch.uk/services/cwmwl/api/get_avatar.php?auth=4f2a3314e46e090675d3d53e1c1d1238&user="+data+"\" style=\"border-radius: 50%; max-height: 80px;\">");
+      $$('span[id=signed_in_avatar]').html("<img src=\"x"+data+"\" style=\"border-radius: 50%; max-height: 80px;\">");
       
-      //$$('#signed_in_user_block').css("background-image", "url('https://portal.newtown-hs.powys.sch.uk/services/cwmwl/api/get_banner.php?auth=4f2a3314e46e090675d3d53e1c1d1238&user="+data+"')");
-
       $$('span[id=device_os]').html(myApp.device.os);
       $$('span[id=device_type]').html(myApp.device.osVersion);
 
